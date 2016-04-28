@@ -13,50 +13,5 @@
 	<developerConnection>scm:git:git@github.com:shyTNT/test.git</developerConnection>
      </scm>
     
-    <build>
-	<plugins>
-		<plugin>
-			<inherited>true</inherited>
-        		<groupId>org.apache.maven.plugins</groupId>
-        		<artifactId>maven-release-plugin</artifactId>
-        		<version>2.2</version>
-			<execution>
-                        <id>integration-test</id>
-                        <goals>
-                                <goal>run</goal>
-                        </goals>
-                        <configuration>
-                                <addTestClassPath>false</addTestClassPath>
-                                <settingsFile>${basedir}/src/test/resources/settings.xml</settingsFile>
-                                <cloneAllFiles>true</cloneAllFiles>
-                                <cloneClean>true</cloneClean>
-                                <cloneProjectsTo>${project.build.directory}/it/projects</cloneProjectsTo>
-                                <mergeUserSettings>true</mergeUserSettings>
-                                <parallelThreads>4</parallelThreads>
-                                <projectsDirectory>${basedir}/src/test/resources/parent</projectsDirectory>
-                                <properties>
-                                        <BUILD_NUMBER>${BUILD_NUMBER}</BUILD_NUMBER>
-                                        <dryRun>true</dryRun>
-                                        <jacoco>true</jacoco>
-                                        <jenkins.build.number>${BUILD_NUMBER}</jenkins.build.number>
-                                        <ignoreSnapshots>true</ignoreSnapshots>
-                                </properties>
-                                <pom>${basedir}/src/test/resources/parent/pom.xml</pom>
-                                <showErrors>true</showErrors>
-                                <showVersion>true</showVersion>
-                                <streamLogs>true</streamLogs>
-                                <debug>false</debug>
-                                <goals>
-                                        <!--goal>clean</goal -->
-                                        <goal>install</goal>
-                                        <goal>sonar:sonar</goal>
-                                        <goal>release:prepare</goal>
-                                        <goal>release:perform</goal>
-                                </goals>
-                        </configuration>
-                </execution>
-      		</plugin>
-   	</plugins>
-    </build>
 
 </project>
