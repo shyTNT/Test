@@ -16,9 +16,9 @@
     </licenses>
 
      <scm>
-	<connection>scm:git:shyTNT@github.com:shyTNT/test.git</connection>
-	<url>scm:git:shyTNT@github.com:shyTNT/test.git</url>
-	<developerConnection>scm:git:shyTNT@github.com:shyTNT/test.git</developerConnection>
+	<connection>scm:git:git@github.com:shyTNT/test.git</connection>
+	<url>scm:git:git@github.com:shyTNT/test.git</url>
+	<developerConnection>scm:git:git@github.com:shyTNT/test.git</developerConnection>
      </scm>
     
     <build>
